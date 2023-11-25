@@ -1,161 +1,146 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1.Klient");
-        System.out.println("2.Kierowca autobusu");
-        System.out.println("3.Pracownik administracji");
-        System.out.println("4. Motorniczy");
-        System.out.println("5. Wyjście");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
-        String password_d = "xyz";
-        String password_a = "123";
-        String password_m = "abc";
+        String password = "xyz";
+        boolean hasloWprowadzone = false;
 
         while (true) {
+            System.out.println("1.Pasażer");
+            System.out.println("2.Pracownik");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
             switch (choice) {
                 case 1:
-
-                    System.out.println("1.Rozkład jazdy autobusów");
-                    System.out.println("2.Rozkład jazdy tramwajów");
-                    System.out.println("3.Linie tramwajów przejeżdające przez stacje");
-                    System.out.println("4.Linie autobusów przejeżdżające przez przystanki");
-                    System.out.println("5.Koszt biletów");
-                    System.out.println("6. Wyjście");
-                    choice = scanner.nextInt();
-                    scanner.nextLine();
-                    switch (choice) {
-                        case 1:
-                            ;
-                        case 2:
-                            ;
-                        case 3:
-                            ;
-                        case 4:
-                            ;
-                        case 5:
-                            ;
-                        case 6:
-                            break;
-                    }
-
-                    ;
-
-                case 2:
-                    System.out.println("Wprowadź hasło");
-                    String pass_d = scanner.nextLine();
-                    if (pass_d.equals(password_d)) {
-                        System.out.println("1.Rozkład jazdy autobusów");
-                        System.out.println("3.Zobacz autobus");
-                        System.out.println("4.Wynagrodzenie");
-                        System.out.println("5. Wyjście");
-                        choice = scanner.nextInt();
-                        scanner.nextLine();
-                        switch (choice) {
-                            case 1:
-                                ;
-                            case 2:
-                                ;
-                            case 3:
-                                ;
-                            case 4:
-                                ;
-                            case 5:
-                                break;
-                        }
-                    }
-                    System.out.println("błędne hasło");
-                    ;
-
-                case 3:
-                    System.out.println("Wprowadź hasło");
-                    String pass_a = scanner.nextLine();
-                    if (pass_a.equals(password_a)) {
-                        System.out.println("1.Zwolnienie pracowników");
-                        System.out.println("2.Zatrudnienie pracowników");
-                        System.out.println("3.Przydzielenie motorniczych do tramwajów");
-                        System.out.println("4.Przydzielenie kierowców do autobusów");
-                        System.out.println("5.Przydzielenie tramwajów do linii");
-                        System.out.println("6.Przydzielenie autobusów do linii");
-                        System.out.println("7.Dodanie nowych tramwajów");
-                        System.out.println("8.Dodanie nowych autobusów");
-                        System.out.println("9.Przydzielenie tramwajów do linii");
-                        System.out.println("10.Przydzielenie autobusów do linii");
-                        System.out.println("11.Zobacz autobus");
-                        System.out.println("12.Zobacz tramwaj");
-                        System.out.println("13. Wyjście");
-                        choice = scanner.nextInt();
-                        scanner.nextLine();
-                        switch (choice) {
-                            case 1:
-                                ;
-                            case 2:
-                                ;
-                            case 3:
-                                ;
-                            case 4:
-                                ;
-                            case 5:
-                                ;
-                            case 6:
-                                ;
-                            case 7:
-                                ;
-                            case 8:
-                                ;
-                            case 9:
-                                ;
-                            case 10:
-                                ;
-                            case 11:
-                                ;
-                            case 12:
-                                ;
-                            case 13:
-                                ;
-                                break;
-                        }
-                    }
-                    System.out.println("błędne hasło");
-                    ;
-
-                case 4:
-                    System.out.println("Wprowadź hasło");
-                    String pass_m = scanner.nextLine();
-                    if (pass_m.equals(password_m)) {
-                        System.out.println("1.Rozkład jazdy tramwajów");
-                        System.out.println("3.Zobacz tramwaj");
-                        System.out.println("4.Wynagrodzenie");
-                        System.out.println("5. Wyjście");
-                        choice = scanner.nextInt();
-                        scanner.nextLine();
-                        switch (choice) {
-                            case 1:
-                                ;
-                            case 2:
-                                ;
-                            case 3:
-                                ;
-                            case 4:
-                                ;
-                            case 5:
-                                break;
-                        }
-                    } else System.out.println("błędne hasło");
-                    ;
-
-                case 5:
+                    handlePassengerMenu(scanner);
                     break;
 
+                case 2:
+                    if (!hasloWprowadzone) {
+                        System.out.println("Wprowadź hasło: ");
+                        String pass = scanner.nextLine();
+                        if (pass.equals(password)) {
+                            hasloWprowadzone = true;
+                        } else {
+                            System.out.println("Błędne hasło");
+                            break;
+                        }
+                    }
 
+                    if (hasloWprowadzone) {
+                        handleEmployeeMenu(scanner);
+                    }
+                    break;
+
+                default:
+                    System.out.println("Nieprawidłowy wybór. Wybierz 1 lub 2.");
+                    break;
             }
-
         }
+    }
 
+    private static void handlePassengerMenu(Scanner scanner) {
+        System.out.println("1.Rozkład jazdy autobusów");
+        System.out.println("2.Rozkład jazdy tramwajów");
+        System.out.println("3.Linie tramwajów przejeżdające przez stacje");
+        System.out.println("4.Linie autobusów przejeżdżające przez przystanki");
+        System.out.println("5.Koszt biletów");
+        System.out.println("6. Wyjście");
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Rozkład jazdy autobusów");
+                break;
+            case 2:
+                System.out.println("Rozkład jazdy tramwajów");
+                break;
+            case 3:
+                System.out.println("Linie tramwajów przejeżdające przez stacje");
+                break;
+            case 4:
+                System.out.println("Linie autobusów przejeżdżające przez przystanki");
+                break;
+            case 5:
+                System.out.println("Koszt biletów");
+                break;
+            case 6:
+                System.out.println("Wyjście");
+                System.exit(0);
+            default:
+                System.out.println("Nieprawidłowy wybór");
+                break;
+        }
+    }
+
+    private static void handleEmployeeMenu(Scanner scanner) {
+        int choice;
+        do {
+            System.out.println("1.Zarządzanie pracownikami");
+            System.out.println("2.Zarządzanie pojazdami");
+            System.out.println("3.Wynagrodzenie");
+            System.out.println("4.Wyjście");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    handleEmployeeManagement(scanner);
+                    break;
+                case 2:
+                    System.out.println("Zarządzanie pojazdami");
+                    break;
+                case 3:
+                    System.out.println("Wynagrodzenie");
+                    break;
+                case 4:
+                    System.out.println("Wyjście");
+                    break;
+                default:
+                    System.out.println("Nieprawidłowy wybór");
+                    break;
+            }
+        } while (choice != 4);
+    }
+
+    private static void handleEmployeeManagement(Scanner scanner) {
+        int choice;
+        do {
+            System.out.println("1.Zwolnienie pracowników");
+            System.out.println("2.Zatrudnienie pracowników");
+            System.out.println("3.Przydzielenie motorniczych do tramwajów");
+            System.out.println("4.Przydzielenie kierowców do autobusów");
+            System.out.println("5.Powrót");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Zwolnienie pracowników");
+                    break;
+                case 2:
+                    System.out.println("Zatrudnienie pracowników");
+                    break;
+                case 3:
+                    System.out.println("Przydzielenie motorniczych do tramwajów");
+                    break;
+                case 4:
+                    System.out.println("Przydzielenie kierowców do autobusów");
+                    break;
+                case 5:
+                    System.out.println("Powrót");
+                    break;
+                default:
+                    System.out.println("Nieprawidłowy wybór");
+                    break;
+            }
+        } while (choice != 5);
     }
 }
-
-
-
