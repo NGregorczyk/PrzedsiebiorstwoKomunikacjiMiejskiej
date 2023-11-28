@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         String password = "xyz";
         boolean hasloWprowadzone = false;
 
@@ -15,7 +16,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    handlePassengerMenu(scanner);
+                    pasażer(scanner);
                     break;
 
                 case 2:
@@ -23,17 +24,14 @@ public class Main {
                         System.out.println("Wprowadź hasło: ");
                         String pass = scanner.nextLine();
                         if (pass.equals(password)) {
-                            hasloWprowadzone = true;
+                            pracownikMenu(scanner);
+
                         } else {
                             System.out.println("Błędne hasło");
                             break;
                         }
                     }
 
-                    if (hasloWprowadzone) {
-                        handleEmployeeMenu(scanner);
-                    }
-                    break;
 
                 default:
                     System.out.println("Nieprawidłowy wybór. Wybierz 1 lub 2.");
@@ -42,7 +40,7 @@ public class Main {
         }
     }
 
-    private static void handlePassengerMenu(Scanner scanner) {
+    private static void pasażer(Scanner scanner) {
         System.out.println("1.Rozkład jazdy autobusów");
         System.out.println("2.Rozkład jazdy tramwajów");
         System.out.println("3.Linie tramwajów przejeżdające przez stacje");
@@ -56,6 +54,7 @@ public class Main {
         switch (choice) {
             case 1:
                 System.out.println("Rozkład jazdy autobusów");
+                //wybor linii przez
                 break;
             case 2:
                 System.out.println("Rozkład jazdy tramwajów");
@@ -78,7 +77,7 @@ public class Main {
         }
     }
 
-    private static void handleEmployeeMenu(Scanner scanner) {
+    private static void pracownikMenu(Scanner scanner) {
         int choice;
         do {
             System.out.println("1.Zarządzanie pracownikami");
@@ -91,10 +90,10 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    handleEmployeeManagement(scanner);
+                    zarządzaniePracownikiem(scanner);
                     break;
                 case 2:
-                    System.out.println("Zarządzanie pojazdami");
+                    zarządzaniePojazdem(scanner);
                     break;
                 case 3:
                     System.out.println("Wynagrodzenie");
@@ -109,7 +108,43 @@ public class Main {
         } while (choice != 4);
     }
 
-    private static void handleEmployeeManagement(Scanner scanner) {
+    private static void zarządzaniePracownikiem(Scanner scanner) {
+        int choice;
+        do {
+            System.out.println("1.Zwolnienie pracowników");
+            System.out.println("2.Zatrudnienie pracowników");
+            System.out.println("3.Przydzielenie motorniczych do tramwajów");
+            System.out.println("4.Przydzielenie kierowców do autobusów");
+            System.out.println("5.Powrót");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Zwolnienie pracowników");
+                    break;
+                case 2:
+                    System.out.println("Zatrudnienie pracowników");
+                    break;
+                case 3:
+                    System.out.println("Przydzielenie motorniczych do tramwajów");
+                    break;
+                case 4:
+                    System.out.println("Przydzielenie kierowców do autobusów");
+                    break;
+                case 5:
+                    System.out.println("Powrót");
+                    break;
+                default:
+                    System.out.println("Nieprawidłowy wybór");
+                    break;
+            }
+        } while (choice != 5);
+
+    }
+
+    private static void zarządzaniePojazdem(Scanner scanner) {
         int choice;
         do {
             System.out.println("1.Zwolnienie pracowników");

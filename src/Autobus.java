@@ -2,24 +2,38 @@ public class Autobus extends Pojazd {
     String rejestracja;
     String przypisanyKierowca;
     int pojemnoscBaku;
+    int linia;
 
 
-    public Autobus(String model, int liczba_miejscc, int linia) {
-        super(model, liczba_miejscc, linia);
+    public Autobus(String model, int liczbaMiejsc) {
+        super(model, liczbaMiejsc);
     }
 
-    public Autobus(String model, int liczba_miejscc, int linia,String rejestracja, String przypisanyKierowca, int pojemnoscBaku) {
-        super(model, liczba_miejscc, linia);
+    public Autobus(String model, int liczbaMiejsc, int linia ,String rejestracja, String przypisanyKierowca, int pojemnoscBaku) {
+        super(model, liczbaMiejsc);
         this.rejestracja=rejestracja;
+        this.linia=linia;
         this.pojemnoscBaku=pojemnoscBaku;
         this.przypisanyKierowca=przypisanyKierowca;
     }
 
 
-    public Autobus(String model, int liczba_miejscc, int linia,String rejestracja, int pojemnoscBaku) {
-        super(model, liczba_miejscc, linia);
+    public Autobus(String model, int liczbaMiejsc, int linia,String rejestracja, int pojemnoscBaku) {
+        super(model, liczbaMiejsc);
+        this.rejestracja=rejestracja;
+        this.linia=linia;
+        this.pojemnoscBaku=pojemnoscBaku;
+    }
+    public Autobus(String model, int liczbaMiejsc,String rejestracja, int pojemnoscBaku) {
+        super(model, liczbaMiejsc);
         this.rejestracja=rejestracja;
         this.pojemnoscBaku=pojemnoscBaku;
+    }
+    public Autobus(String model, int liczbaMiejsc ,String rejestracja, String przypisanyKierowca, int pojemnoscBaku) {
+        super(model, liczbaMiejsc);
+        this.rejestracja=rejestracja;
+        this.pojemnoscBaku=pojemnoscBaku;
+        this.przypisanyKierowca=przypisanyKierowca;
     }
 
 
@@ -52,11 +66,19 @@ public class Autobus extends Pojazd {
         this.pojemnoscBaku = pojemnoscBaku;
     }
 
+    public int getLinia() {
+        return linia;
+    }
+
+    public void setLinia(int linia) {
+        this.linia = linia;
+    }
+
     @Override
     public String toString() {
         return "Pojazd{" +
                 "model='" + model + '\'' +
-                ", liczba_miejscc=" + liczba_miejscc +
+                ", liczba_miejscc=" + liczbaMiejsc +
                 ", linia=" + linia +
                 ", rejestracja='" + rejestracja + '\'' +
                 ", przypisanyKierowca='" + przypisanyKierowca + '\'' +

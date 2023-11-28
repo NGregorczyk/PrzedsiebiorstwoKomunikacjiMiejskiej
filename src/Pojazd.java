@@ -1,14 +1,13 @@
 public class Pojazd {
 
     String model;
-    int liczba_miejscc;
-    int linia;
+    int liczbaMiejsc;
 
 
-    public Pojazd(String model, int liczba_miejscc, int linia) {
+
+    public Pojazd(String model, int liczbaMiejsc) {
         this.model = model;
-        this.liczba_miejscc = liczba_miejscc;
-        this.linia = linia;
+        this.liczbaMiejsc = liczbaMiejsc;
     }
 
 
@@ -20,28 +19,20 @@ public class Pojazd {
         this.model = model;
     }
 
-    public int getLiczba_miejscc() {
-        return liczba_miejscc;
+    public int getLiczbaMiejsc() {
+        return liczbaMiejsc;
     }
 
-    public void setLiczba_miejscc(int liczba_miejscc) {
-        this.liczba_miejscc = liczba_miejscc;
+    public void setLiczbaMiejsc(int liczbaMiejsc) {
+        this.liczbaMiejsc = liczbaMiejsc;
     }
 
-    public int getLinia() {
-        return linia;
-    }
-
-    public void setLinia(int linia) {
-        this.linia = linia;
-    }
 
     @Override
     public String toString() {
         return "Pojazd{" +
                 "model='" + model + '\'' +
-                ", liczba_miejscc=" + liczba_miejscc +
-                ", linia=" + linia +
+                ", liczba_miejscc=" + liczbaMiejsc +
                 '}';
     }
 }

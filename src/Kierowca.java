@@ -1,2 +1,32 @@
-public class Kierowca {
+public class Kierowca extends Pracownik {
+    String rejestracja;
+
+    public Kierowca(String imie, String nazwisko, int wiek, int lataPracy, String rejestracja) {
+        super(imie, nazwisko, wiek, lataPracy);
+        this.rejestracja = rejestracja;
+    }
+    public Kierowca(String imie, String nazwisko, int wiek, int lataPracy) {
+        super(imie, nazwisko, wiek, lataPracy);
+    }
+
+    public String getRejestracja() {
+        return rejestracja;
+    }
+
+    public void setRejestracja(String rejestracja) {
+        this.rejestracja = rejestracja;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Kierowca{" +
+                "rejestracja='" + rejestracja + '\'' +
+                ", imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", wiek=" + wiek +
+                ", lataPracy=" + lataPracy +
+                '}';
+    }
 }
