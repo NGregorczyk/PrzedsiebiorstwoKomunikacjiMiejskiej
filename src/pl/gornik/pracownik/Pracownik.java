@@ -1,3 +1,5 @@
+package pl.gornik.pracownik;
+
 public class Pracownik {
     String imie;
     String nazwisko;
@@ -45,7 +47,7 @@ public class Pracownik {
 
     @Override
     public String toString() {
-        return "Pracownik{" +
+        return "pl.gornik.Pracownik.pl.gornik.Pracownik{" +
                 "imie='" + imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
                 ", wiek=" + wiek +

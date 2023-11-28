@@ -1,3 +1,5 @@
+package pl.gornik.przystanek;
+
 public class Przystanek {
     String godzinaPrzyjazdu;
 
@@ -19,7 +21,7 @@ public class Przystanek {
 
     @Override
     public String toString() {
-        return "Przystanek{" +
+        return "pl.gornik.Przystanek.pl.gornik.Przystanek{" +
                 "godzinaPrzyjazdu='" + godzinaPrzyjazdu + '\'' +
                 ", nazwaUlicy='" + nazwaUlicy + '\'' +
                 '}';

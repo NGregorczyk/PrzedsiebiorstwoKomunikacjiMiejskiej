@@ -1,3 +1,5 @@
+package pl.gornik.pojazd;
+
 public class Autobus extends Pojazd {
     String rejestracja;
     String przypisanyKierowca;
@@ -76,7 +78,7 @@ public class Autobus extends Pojazd {
 
     @Override
     public String toString() {
-        return "Pojazd{" +
+        return "pl.gornik.Pojazd.pl.gornik.Pojazd{" +
                 "model='" + model + '\'' +
                 ", liczba_miejscc=" + liczbaMiejsc +
                 ", linia=" + linia +

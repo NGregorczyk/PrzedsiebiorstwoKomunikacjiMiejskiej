@@ -1,3 +1,5 @@
+package pl.gornik.pojazd;
+
 public class Tramwaj extends Pojazd {
     String numerPojazdu;
     String przypisanyMotorniczy;
@@ -43,7 +45,7 @@ public class Tramwaj extends Pojazd {
 
     @Override
     public String toString() {
-        return "Tramwaj{" +
+        return "pl.gornik.Pojazd.Tramwaj{" +
                 "numerPojazdu=" + numerPojazdu +
                 ", przypisanyMotorniczy='" + przypisanyMotorniczy + '\'' +
                 ", model='" + model + '\'' +

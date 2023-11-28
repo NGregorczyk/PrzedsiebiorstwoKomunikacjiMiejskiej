@@ -1,3 +1,5 @@
+package pl.gornik.pojazd;
+
 public class Pojazd {
 
     String model;
@@ -30,7 +32,7 @@ public class Pojazd {
 
     @Override
     public String toString() {
-        return "Pojazd{" +
+        return "pl.gornik.Pojazd.pl.gornik.Pojazd{" +
                 "model='" + model + '\'' +
                 ", liczba_miejscc=" + liczbaMiejsc +
                 '}';

@@ -1,3 +1,5 @@
+package pl.gornik.pracownik;
+
 public class Motorniczy extends Pracownik {
     String numerPojazdu;
 
@@ -19,7 +21,7 @@ public class Motorniczy extends Pracownik {
 
     @Override
     public String toString() {
-        return "Kierowca{" +
+        return "pl.gornik.Pracownik.Kierowca{" +
                 "NumerPojazdu='" + numerPojazdu + '\'' +
                 ", imie='" + imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +

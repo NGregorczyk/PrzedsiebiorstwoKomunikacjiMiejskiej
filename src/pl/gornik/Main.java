@@ -1,3 +1,5 @@
+package pl.gornik;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +12,7 @@ public class Main {
 
         while (true) {
             System.out.println("1.Pasażer");
-            System.out.println("2.Pracownik");
+            System.out.println("2.pl.gornik.Pracownik.pl.gornik.Pracownik");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
