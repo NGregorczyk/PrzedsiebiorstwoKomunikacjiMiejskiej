@@ -1,7 +1,7 @@
 package pl.gornik.pracownik;
 
 public class Motorniczy extends Pracownik {
-    String numerPojazdu;
+    private String numerPojazdu;
 
     public Motorniczy(String imie, String nazwisko, int wiek, int lataPracy, String numerPojazdu) {
         super(imie, nazwisko, wiek, lataPracy);
@@ -23,10 +23,10 @@ public class Motorniczy extends Pracownik {
     public String toString() {
         return "pl.gornik.Pracownik.Kierowca{" +
                 "NumerPojazdu='" + numerPojazdu + '\'' +
-                ", imie='" + imie + '\'' +
-                ", nazwisko='" + nazwisko + '\'' +
-                ", wiek=" + wiek +
-                ", lataPracy=" + lataPracy +
+                ", imie='" + getImie() + '\'' +
+                ", nazwisko='" + getNazwisko() + '\'' +
+                ", wiek=" + getWiek() +
+                ", lataPracy=" + getLataPracy() +
                 '}';
     }
 }

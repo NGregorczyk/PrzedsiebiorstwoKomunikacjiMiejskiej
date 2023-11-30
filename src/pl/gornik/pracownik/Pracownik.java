@@ -1,10 +1,10 @@
 package pl.gornik.pracownik;
 
 public class Pracownik {
-    String imie;
-    String nazwisko;
-    int wiek;
-    int lataPracy;
+    private  String imie;
+    private   String nazwisko;
+    private  int wiek;
+    private  int lataPracy;
 
     public Pracownik(String imie, String nazwisko, int wiek, int lataPracy) {
         this.imie = imie;

@@ -2,8 +2,8 @@ package pl.gornik.pojazd;
 
 public class Pojazd {
 
-    String model;
-    int liczbaMiejsc;
+    private String model;
+    private  int liczbaMiejsc;
 
 
 

@@ -1,9 +1,9 @@
 package pl.gornik.pojazd;
 
 public class Tramwaj extends Pojazd {
-    String numerPojazdu;
-    String przypisanyMotorniczy;
-    int linia;
+    private  String numerPojazdu;
+    private  String przypisanyMotorniczy;
+    private int linia;
 
     public Tramwaj(String model, int liczba_miejscc, int linia, String numerPojazdu, String przypisanyMotorniczy) {
         super(model, liczba_miejscc);
@@ -48,8 +48,8 @@ public class Tramwaj extends Pojazd {
         return "pl.gornik.Pojazd.Tramwaj{" +
                 "numerPojazdu=" + numerPojazdu +
                 ", przypisanyMotorniczy='" + przypisanyMotorniczy + '\'' +
-                ", model='" + model + '\'' +
-                ", liczba_miejscc=" + liczbaMiejsc +
+                ", model='" + getModel() + '\'' +
+                ", liczba_miejscc=" + getLiczbaMiejsc() +
                 ", linia=" + linia +
                 '}';
     }

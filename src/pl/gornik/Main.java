@@ -30,60 +30,54 @@ public class Main {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ArrayList<Przystanek> Linia2 = new ArrayList<Przystanek>();
-        Linia1.add(new Przystanek("9:20", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("9:35", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("9:40", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("10:00", "ul.Partyzantów 15b", 1));
+        Linia2.add(new Przystanek("6:00", "ul.Legionowa 3", 2));
+        Linia2.add(new Przystanek("6:10", "ul.Lipińskiego 14", 2));
+        Linia2.add(new Przystanek("6:15", "ul.Ulanowskiego 2a", 2));
+        Linia2.add(new Przystanek("6:30", "ul.Mickiewicza", 2));
+        Linia2.add(new Przystanek("6:35", "ul.Szkolna 10a", 2));
 
-        Linia1.add(new Przystanek("10:15", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("10:30", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("10:35", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("10:55", "ul.Partyzantów 15b", 1));
+        Linia2.add(new Przystanek("6:50", "ul.Legionowa 3", 2));
+        Linia2.add(new Przystanek("7:00", "ul.Lipińskiego 14", 2));
+        Linia2.add(new Przystanek("7:05", "ul.Ulanowskiego 2a", 2));
+        Linia2.add(new Przystanek("7:20", "ul.Mickiewicza", 2));
+        Linia2.add(new Przystanek("7:25", "ul.Szkolna 10a", 2));
 
-        Linia1.add(new Przystanek("11:10", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("11:25", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("11:30", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("11:50", "ul.Partyzantów 15b", 1));
+        Linia2.add(new Przystanek("7:40", "ul.Legionowa 3", 2));
+        Linia2.add(new Przystanek("7:50", "ul.Lipińskiego 14", 2));
+        Linia2.add(new Przystanek("7:55", "ul.Ulanowskiego 2a", 2));
+        Linia2.add(new Przystanek("8:10", "ul.Mickiewicza", 2));
+        Linia2.add(new Przystanek("8:10", "ul.Szkolna 10a", 2));
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ArrayList<Przystanek> Linia3 = new ArrayList<Przystanek>();
-        Linia1.add(new Przystanek("9:20", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("9:35", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("9:40", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("10:00", "ul.Partyzantów 15b", 1));
+        ;
 
-        Linia1.add(new Przystanek("10:15", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("10:30", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("10:35", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("10:55", "ul.Partyzantów 15b", 1));
-
-        Linia1.add(new Przystanek("11:10", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("11:25", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("11:30", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("11:50", "ul.Partyzantów 15b", 1));
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ArrayList<Przystanek> Linia4 = new ArrayList<Przystanek>();
-        Linia1.add(new Przystanek("9:20", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("9:35", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("9:40", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("10:00", "ul.Partyzantów 15b", 1));
+        Linia2.add(new Przystanek("6:00", "ul.Legionowa 3", 2));
+        Linia2.add(new Przystanek("6:10", "ul.Lipińskiego 14", 2));
+        Linia2.add(new Przystanek("6:15", "ul.Ulanowskiego 2a", 2));
+        Linia2.add(new Przystanek("6:30", "ul.Mickiewicza", 2));
+        Linia2.add(new Przystanek("6:35", "ul.Szkolna 10a", 2));
 
-        Linia1.add(new Przystanek("10:15", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("10:30", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("10:35", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("10:55", "ul.Partyzantów 15b", 1));
+        Linia2.add(new Przystanek("6:50", "ul.Legionowa 3", 2));
+        Linia2.add(new Przystanek("7:00", "ul.Lipińskiego 14", 2));
+        Linia2.add(new Przystanek("7:05", "ul.Ulanowskiego 2a", 2));
+        Linia2.add(new Przystanek("7:20", "ul.Mickiewicza", 2));
+        Linia2.add(new Przystanek("7:25", "ul.Szkolna 10a", 2));
 
-        Linia1.add(new Przystanek("11:10", "ul.Zachodnia 20", 1));
-        Linia1.add(new Przystanek("11:25", "ul.Szkolna 10a", 1));
-        Linia1.add(new Przystanek("11:30", "ul.Szkolna 3", 1));
-        Linia1.add(new Przystanek("11:50", "ul.Partyzantów 15b", 1));
+        Linia2.add(new Przystanek("7:40", "ul.Legionowa 3", 2));
+        Linia2.add(new Przystanek("7:50", "ul.Lipińskiego 14", 2));
+        Linia2.add(new Przystanek("7:55", "ul.Ulanowskiego 2a", 2));
+        Linia2.add(new Przystanek("8:10", "ul.Mickiewicza", 2));
+        Linia2.add(new Przystanek("8:10", "ul.Szkolna 10a", 2));
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         String password = "xyz";
         boolean hasloWprowadzone = false;
 
@@ -95,7 +89,51 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    pasazer(scanner);
+                  //  pasazer(scanner);
+                    System.out.println("1.Rozkład jazdy autobusów");
+                    System.out.println("2.Rozkład jazdy tramwajów");
+                    System.out.println("3.Linie tramwajów przejeżdające przez stacje");
+                    System.out.println("4.Linie autobusów przejeżdżające przez przystanki");
+                    System.out.println("5.Koszt biletów");
+                    System.out.println("6. Wyjście");
+
+                    int choice2 = scanner.nextInt();
+                    scanner.nextLine();
+
+                    switch (choice2) {
+                        case 1:
+                            System.out.println("Rozkład jazdy autobusów");
+
+                            break;
+
+                        case 2:
+                            System.out.println("Rozkład jazdy tramwajów");
+                            //wybor linii przez scanner
+                            break;
+                        case 3:
+                            System.out.println("Linie tramwajów przejeżdające przez stacje");
+                            //linie przejezdzajace przez stacje, przyrownanie scannera do nazwy stacji
+                            break;
+                        case 4:
+                            System.out.println("Linie autobusów przejeżdżające przez przystanki");
+                            System.out.println("Podaj nazwę ulicy: ");
+                            String nazwaUlicy = scanner.nextLine();
+
+                            // Wyszukanie przystanków dla obu linii autobusowych
+                            wyswietlPrzystanki(Linia1, nazwaUlicy);
+                            wyswietlPrzystanki(Linia2, nazwaUlicy);
+                            break;
+                        case 5:
+                            System.out.println("Koszt biletów");
+                            //metoda do obliczania kosztu biletow, ulgowe i zwykle w zaleznosci od ilosci przystankow
+                            break;
+                        case 6:
+                            System.out.println("Wyjście");
+                            System.exit(0);
+                        default:
+                            System.out.println("Nieprawidłowy wybór");
+                            break;
+                    }
                     break;
 
                 case 2:
@@ -112,13 +150,13 @@ public class Main {
                     }
 
 
-                default:
-                    System.out.println("Nieprawidłowy wybór. Wybierz 1 lub 2.");
-                    break;
+             //   default:
+                //    System.out.println("Nieprawidłowy wybór. Wybierz 1 lub 2.");
+                //    break;
             }
         }
     }
-
+/*
     private static void pasazer(Scanner scanner) {
         System.out.println("1.Rozkład jazdy autobusów");
         System.out.println("2.Rozkład jazdy tramwajów");
@@ -145,7 +183,7 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Linie autobusów przejeżdżające przez przystanki");
-                //linie przejezdzajace przez stacje, przyrownanie scannera do nazwy przystanka
+
                 break;
             case 5:
                 System.out.println("Koszt biletów");
@@ -158,7 +196,10 @@ public class Main {
                 System.out.println("Nieprawidłowy wybór");
                 break;
         }
+
     }
+ */
+
 
     private static void pracownikMenu(Scanner scanner) {
         int choice;
@@ -249,6 +290,7 @@ public class Main {
             switch (choice) {
                 case 1:
                     System.out.println("1.Dodawanie tramwajów");
+
                     //metoda do dodawania tramwajow, przypisywaniu do tramwaju pracownika, jesli nie ma pracownika to tramwaj bez linii i pracownika
                     //jesli dodany pracownik dodanie go do liniii.
                     break;
@@ -282,4 +324,15 @@ public class Main {
             }
         } while (choice != 7);
     }
+    private static void wyswietlPrzystanki(ArrayList<Przystanek> linia, String nazwaUlicy) {
+        System.out.println("Przystanki na ulicy " + nazwaUlicy + ":");
+        for (Przystanek przystanek : linia) {
+            if (przystanek.getNazwaUlicy().contains(nazwaUlicy)) {
+                System.out.println("Linia: " + przystanek.getLinia() +
+                        ", Godzina przyjazdu: " + przystanek.getGodzinaPrzyjazdu() +
+                        ", Nazwa ulicy: " + przystanek.getNazwaUlicy());
+            }
+        }
+    }
+
 }
