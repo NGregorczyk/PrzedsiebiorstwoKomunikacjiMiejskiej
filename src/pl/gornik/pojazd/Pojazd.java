@@ -1,17 +1,13 @@
 package pl.gornik.pojazd;
 
 public class Pojazd {
-
     private String model;
-    private  int liczbaMiejsc;
-
-
+    private int liczbaMiejsc;
 
     public Pojazd(String model, int liczbaMiejsc) {
         this.model = model;
         this.liczbaMiejsc = liczbaMiejsc;
     }
-
 
     public String getModel() {
         return model;
@@ -28,7 +24,6 @@ public class Pojazd {
     public void setLiczbaMiejsc(int liczbaMiejsc) {
         this.liczbaMiejsc = liczbaMiejsc;
     }
-
 
     @Override
     public String toString() {

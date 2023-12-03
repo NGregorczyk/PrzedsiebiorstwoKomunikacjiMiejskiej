@@ -1,8 +1,8 @@
 package pl.gornik.pojazd;
 
 public class Tramwaj extends Pojazd {
-    private  String numerPojazdu;
-    private  String przypisanyMotorniczy;
+    private String numerPojazdu;
+    private String przypisanyMotorniczy;
     private int linia;
 
     public Tramwaj(String model, int liczba_miejscc, int linia, String numerPojazdu, String przypisanyMotorniczy) {
@@ -12,9 +12,8 @@ public class Tramwaj extends Pojazd {
         this.przypisanyMotorniczy = przypisanyMotorniczy;
     }
 
-    public Tramwaj(String model, int liczba_miejscc, int linia, String numerPojazdu) {
+    public Tramwaj(String model, int liczba_miejscc, String numerPojazdu) {
         super(model, liczba_miejscc);
-        this.linia = linia;
         this.numerPojazdu = numerPojazdu;
 
     }
@@ -41,6 +40,13 @@ public class Tramwaj extends Pojazd {
 
     public void setLinia(int linia) {
         this.linia = linia;
+    }
+
+    public void usunMotorniczego(String numerPojazdu) {
+        if (numerPojazdu.equals(this.numerPojazdu)) {
+            this.przypisanyMotorniczy = null;
+            System.out.println("Usunięto motorniczego z tramwaju " + this.getNumerPojazdu());
+        }
     }
 
     @Override

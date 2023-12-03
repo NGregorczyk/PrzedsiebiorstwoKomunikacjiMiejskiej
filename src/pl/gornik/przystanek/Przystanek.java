@@ -1,10 +1,11 @@
 package pl.gornik.przystanek;
 
+import java.util.ArrayList;
+
 public class Przystanek {
     private String godzinaPrzyjazdu;
-
     private static int id = 1;
-  int temp;
+    int temp;
     private String nazwaUlicy;
 
     private int linia;
@@ -26,7 +27,6 @@ public class Przystanek {
     }
 
 
-
     public String getNazwaUlicy() {
         return nazwaUlicy;
     }
@@ -43,8 +43,32 @@ public class Przystanek {
         this.linia = linia;
     }
 
-    //dorobic gettery i settery i dolozyc do tostringa i do obiektow id i zrobic enkapsulacje//////////////////////////////////////////////////////////
-    public Przystanek() {
+    public static double obliczKosztBiletow(ArrayList<Przystanek> przystanki, String poczatkowyPrzystanek, String koncowyPrzystanek, boolean ulgowy) {
+        int indeksPoczatkowego = -1;
+        int indeksKoncowego = -1;
+        for (int i = 0; i < przystanki.size(); i++) {
+            if (przystanki.get(i).getNazwaUlicy().equals(poczatkowyPrzystanek)) {
+                indeksPoczatkowego = i;
+            }
+            if (przystanki.get(i).getNazwaUlicy().equals(koncowyPrzystanek)) {
+                indeksKoncowego = i;
+            }
+        }
+
+        if (indeksPoczatkowego == -1 || indeksKoncowego == -1) {
+            System.out.println("Nie znaleziono przystanku początkowego lub końcowego.");
+            return -1;
+        }
+
+        int liczbaPrzejechanychPrzystankow = Math.abs(indeksKoncowego - indeksPoczatkowego) + 1;
+
+        double koszt = liczbaPrzejechanychPrzystankow * 2.5;
+
+        if (ulgowy) {
+            koszt *= 0.8;
+        }
+
+        return koszt;
     }
 
     @Override

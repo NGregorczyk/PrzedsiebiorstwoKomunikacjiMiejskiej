@@ -2,47 +2,40 @@ package pl.gornik.pojazd;
 
 public class Autobus extends Pojazd {
     private String rejestracja;
-    private   String przypisanyKierowca;
-    private int pojemnoscBaku;
-    private int linia;
+    private String przypisanyKierowca;
 
+    private int linia;
 
     public Autobus(String model, int liczbaMiejsc) {
         super(model, liczbaMiejsc);
     }
 
-    public Autobus(String model, int liczbaMiejsc, int linia ,String rejestracja, String przypisanyKierowca, int pojemnoscBaku) {
+    public Autobus(String model, int liczbaMiejsc, int linia, String rejestracja, String przypisanyKierowca) {
         super(model, liczbaMiejsc);
-        this.rejestracja=rejestracja;
-        this.linia=linia;
-        this.pojemnoscBaku=pojemnoscBaku;
-        this.przypisanyKierowca=przypisanyKierowca;
+        this.rejestracja = rejestracja;
+        this.linia = linia;
+        ;
+        this.przypisanyKierowca = przypisanyKierowca;
     }
 
-
-    public Autobus(String model, int liczbaMiejsc, int linia,String rejestracja, int pojemnoscBaku) {
+    public Autobus(String model, int liczbaMiejsc, int linia, String rejestracja) {
         super(model, liczbaMiejsc);
-        this.rejestracja=rejestracja;
-        this.linia=linia;
-        this.pojemnoscBaku=pojemnoscBaku;
-    }
-    public Autobus(String model, int liczbaMiejsc,String rejestracja, int pojemnoscBaku) {
-        super(model, liczbaMiejsc);
-        this.rejestracja=rejestracja;
-        this.pojemnoscBaku=pojemnoscBaku;
-    }
-    public Autobus(String model, int liczbaMiejsc ,String rejestracja, String przypisanyKierowca, int pojemnoscBaku) {
-        super(model, liczbaMiejsc);
-        this.rejestracja=rejestracja;
-        this.pojemnoscBaku=pojemnoscBaku;
-        this.przypisanyKierowca=przypisanyKierowca;
+        this.rejestracja = rejestracja;
+        this.linia = linia;
     }
 
+    public Autobus(String model, int liczbaMiejsc, String rejestracja) {
+        super(model, liczbaMiejsc);
+        this.rejestracja = rejestracja;
 
-    public double cenaPaliwa(int pojemnoscBaku){
-        double cenaZaLitr=6.6;
-        return pojemnoscBaku*cenaZaLitr;
     }
+
+    public Autobus(String model, int liczbaMiejsc, String rejestracja, String przypisanyKierowca) {
+        super(model, liczbaMiejsc);
+        this.rejestracja = rejestracja;
+        this.przypisanyKierowca = przypisanyKierowca;
+    }
+
 
     public String getRejestracja() {
         return rejestracja;
@@ -60,20 +53,19 @@ public class Autobus extends Pojazd {
         this.przypisanyKierowca = przypisanyKierowca;
     }
 
-    public int getPojemnoscBaku() {
-        return pojemnoscBaku;
-    }
-
-    public void setPojemnoscBaku(int pojemnoscBaku) {
-        this.pojemnoscBaku = pojemnoscBaku;
-    }
-
     public int getLinia() {
         return linia;
     }
 
     public void setLinia(int linia) {
         this.linia = linia;
+    }
+
+    public void usunKierowce(String rejestracja) {
+        if (rejestracja.equals(this.rejestracja)) {
+            this.przypisanyKierowca = null;
+            System.out.println("Usunięto kierowcę z autobusu " + this.getRejestracja());
+        }
     }
 
     @Override
@@ -83,8 +75,7 @@ public class Autobus extends Pojazd {
                 ", liczba_miejscc=" + getLiczbaMiejsc() +
                 ", linia=" + linia +
                 ", rejestracja='" + rejestracja + '\'' +
-                ", przypisanyKierowca='" + przypisanyKierowca + '\'' +
-                ", pojemnoscBaku=" + pojemnoscBaku +
+                ", przypisanyKierowca='" + przypisanyKierowca +
 
                 '}';
     }
