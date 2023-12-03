@@ -329,6 +329,36 @@ public class Main {
                                 double kosztBiletow = obliczKosztBiletow(wybranaLinia, poczatkowyPrzystanek, koncowyPrzystanek, ulgowy);
                                 System.out.println("Koszt biletów: " + kosztBiletow);
                                 System.out.println(" ");
+
+                            } else if (wybor2==2) {
+                                System.out.println("Podaj staję początkową: ");
+                                String poczatkowyPrzystanek = scanner.nextLine().toLowerCase().replaceAll("^ul\\.", "");
+                                System.out.println("Podaj stację końcową: ");
+                                String koncowyPrzystanek = scanner.nextLine().toLowerCase().replaceAll("^ul\\.", "");
+                                System.out.println("Podaj numer linii (1, 2, 3): ");
+                                int numerLinii = scanner.nextInt();
+                                scanner.nextLine();
+                                System.out.println("Czy chcesz bilet ulgowy? (true/false): ");
+                                boolean ulgowy = scanner.nextBoolean();
+                                ArrayList<Stacja> wybranaLinia;
+                                switch (numerLinii) {
+                                    case 1:
+                                        wybranaLinia = stacja1;
+                                        break;
+                                    case 2:
+                                        wybranaLinia = stacja2;
+                                        break;
+                                    case 3:
+                                        wybranaLinia = stacja3;
+                                        break;
+                                    default:
+                                        System.out.println("Nieprawidłowy numer linii.");
+                                        return;
+                                }
+
+                                double kosztBiletow = obliczKosztBiletowT(wybranaLinia, poczatkowyPrzystanek, koncowyPrzystanek, ulgowy);
+                                System.out.println("Koszt biletów: " + kosztBiletow);
+                                System.out.println(" ");
                             }
                         case 6:
                             System.exit(0);
@@ -815,6 +845,38 @@ public class Main {
 
         return kosztBiletow;
     }
+
+    private static double obliczKosztBiletowT(ArrayList<Stacja> stacje, String poczatkowyPrzystanek, String koncowyPrzystanek, boolean ulgowy) {
+        poczatkowyPrzystanek = poczatkowyPrzystanek.toLowerCase().replaceAll("^ul\\.", "");
+        koncowyPrzystanek = koncowyPrzystanek.toLowerCase().replaceAll("^ul\\.", "");
+
+        int indeksPoczatkowego = -1;
+        int indeksKoncowego = -1;
+
+        for (int i = 0; i < stacje.size(); i++) {
+            String nazwa = stacje.get(i).getNazwaStacji().toLowerCase().replaceAll("^ul\\.", "");
+            if (nazwa.equals(poczatkowyPrzystanek)) {
+                indeksPoczatkowego = i;
+            } else if (nazwa.equals(koncowyPrzystanek)) {
+                indeksKoncowego = i;
+            }
+        }
+
+        if (indeksPoczatkowego == -1 || indeksKoncowego == -1) {
+            System.out.println("Nie znaleziono stacji.");
+            return 0;
+        }
+        int iloscPrzystankow = Math.abs(indeksPoczatkowego - indeksKoncowego) + 1;
+        double kosztBiletow = iloscPrzystankow * 2.5;
+
+
+        if (ulgowy) {
+            kosztBiletow *= 0.8;
+        }
+
+        return kosztBiletow;
+    }
+
 
     public static Motorniczy znajdzMotorniczegoPoNazwisku(ArrayList<Motorniczy> motorniczy, String nazwisko) {
         for (Motorniczy motorniczyItem : motorniczy) {

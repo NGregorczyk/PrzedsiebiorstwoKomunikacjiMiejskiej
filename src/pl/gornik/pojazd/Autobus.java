@@ -31,9 +31,6 @@ public class Autobus extends Pojazd {
     public void setPrzypisanyKierowca(String przypisanyKierowca) {
         this.przypisanyKierowca = przypisanyKierowca;
     }
-    public int getLinia() {
-        return linia;
-    }
     public void setLinia(int linia) {
         this.linia = linia;
     }

@@ -24,14 +24,8 @@ public class Przystanek {
     public String getNazwaUlicy() {
         return nazwaUlicy;
     }
-    public void setNazwaUlicy(String nazwaUlicy) {
-        this.nazwaUlicy = nazwaUlicy;
-    }
     public int getLinia() {
         return linia;
-    }
-    public void setLinia(int linia) {
-        this.linia = linia;
     }
 
     @Override
