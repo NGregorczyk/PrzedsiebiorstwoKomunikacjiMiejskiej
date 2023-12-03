@@ -1,6 +1,7 @@
 package pl.gornik.pracownik;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Motorniczy extends Pracownik {
     private String numerPojazdu;
@@ -12,10 +13,11 @@ public class Motorniczy extends Pracownik {
 
     public Motorniczy(String imie, String nazwisko, int wiek, int lataPracy) {
         super(imie, nazwisko, wiek, lataPracy);
+        this.numerPojazdu = "";
     }
 
     public String getNumerPojazdu() {
-        return numerPojazdu;
+        return numerPojazdu != null ? numerPojazdu : "";
     }
 
     public void setNumerPojazdu(String numerPojazdu) {
@@ -40,6 +42,15 @@ public class Motorniczy extends Pracownik {
 
     public void zwolnijPracownika() {
         System.out.println("Zwolniono motorniczego: " + this);
+    }
+
+    public static Motorniczy dodajMotorniczego(Scanner scanner) {
+        String imie = wprowadzImie(scanner);
+        String nazwisko = wprowadzNazwisko(scanner);
+        int wiek = wprowadzWiek(scanner);
+        int lataPracy =0;
+
+        return new Motorniczy(imie, nazwisko, wiek, lataPracy);
     }
 
     @Override

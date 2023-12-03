@@ -1,6 +1,7 @@
 package pl.gornik.pracownik;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Kierowca extends Pracownik {
     private String rejestracja;
@@ -39,6 +40,14 @@ public class Kierowca extends Pracownik {
 
     public void zwolnijPracownika() {
         System.out.println("Zwolniono kierowcę: " + this);
+    }
+
+    public static Kierowca dodajKierowce(Scanner scanner) {
+        String imie = wprowadzImie(scanner);
+        String nazwisko = wprowadzNazwisko(scanner);
+        int wiek = wprowadzWiek(scanner);
+        int lataPracy = 0;
+        return new Kierowca(imie, nazwisko, wiek, lataPracy);
     }
 
     @Override

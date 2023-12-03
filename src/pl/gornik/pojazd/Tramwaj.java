@@ -19,23 +19,15 @@ public class Tramwaj extends Pojazd {
     }
 
     public String getNumerPojazdu() {
-        return numerPojazdu;
-    }
-
-    public void setNumerPojazdu(String numerPojazdu) {
-        this.numerPojazdu = numerPojazdu;
+        return numerPojazdu != null ? numerPojazdu : "";
     }
 
     public String getPrzypisanyMotorniczy() {
-        return przypisanyMotorniczy;
+        return przypisanyMotorniczy != null ? przypisanyMotorniczy : "";
     }
 
     public void setPrzypisanyMotorniczy(String przypisanyMotorniczy) {
         this.przypisanyMotorniczy = przypisanyMotorniczy;
-    }
-
-    public int getLinia() {
-        return linia;
     }
 
     public void setLinia(int linia) {
