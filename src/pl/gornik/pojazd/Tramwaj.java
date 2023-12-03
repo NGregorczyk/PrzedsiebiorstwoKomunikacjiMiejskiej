@@ -1,7 +1,7 @@
 package pl.gornik.pojazd;
 
 public class Tramwaj extends Pojazd {
-    private String numerPojazdu;
+    private final String numerPojazdu;
     private String przypisanyMotorniczy;
     private int linia;
 

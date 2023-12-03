@@ -114,7 +114,7 @@ public class Main {
         stacja3.add(new Stacja("22:30", "ul.Mariacka", 3));
         stacja3.add(new Stacja("22:40", "ul.Graniczna", 3));
 
-        ArrayList<Przystanek> linia1 = new ArrayList<Przystanek>();
+        ArrayList<Przystanek> linia1 = new ArrayList<>();
         linia1.add(new Przystanek("9:20", "ul.Zachodnia 20", 1));
         linia1.add(new Przystanek("9:35", "ul.Szkolna 10a", 1));
         linia1.add(new Przystanek("9:40", "ul.Szkolna 3", 1));
@@ -130,7 +130,7 @@ public class Main {
         linia1.add(new Przystanek("11:30", "ul.Szkolna 3", 1));
         linia1.add(new Przystanek("11:50", "ul.Partyzantów 15b", 1));
 
-        ArrayList<Przystanek> linia2 = new ArrayList<Przystanek>();
+        ArrayList<Przystanek> linia2 = new ArrayList<>();
         linia2.add(new Przystanek("6:00", "ul.Legionowa 3", 2));
         linia2.add(new Przystanek("6:10", "ul.Lipińskiego 14", 2));
         linia2.add(new Przystanek("6:15", "ul.Ulanowskiego 2a", 2));
@@ -149,7 +149,7 @@ public class Main {
         linia2.add(new Przystanek("8:10", "ul.Mickiewicza", 2));
         linia2.add(new Przystanek("8:10", "ul.Szkolna 10a", 2));
 
-        ArrayList<Przystanek> linia3 = new ArrayList<Przystanek>();
+        ArrayList<Przystanek> linia3 = new ArrayList<>();
         linia3.add(new Przystanek("18:20", "ul.Legionowa 20", 3));
         linia3.add(new Przystanek("18:30", "ul.Szkolna 10a", 3));
         linia3.add(new Przystanek("18:35", "ul.Szpitalna 2", 3));
@@ -493,8 +493,6 @@ public class Main {
                                                     }
                                                     break;
                                                 case 4:
-                                                    System.out.println("Przydzielenie kierowców do autobusów");
-
                                                     System.out.println("Podaj nazwisko kierowcy:");
                                                     String nazwiskoKierowcy = scanner.nextLine().trim();
 
@@ -754,7 +752,7 @@ public class Main {
                                         System.out.println("Nieprawidłowy wybór");
                                         break;
                                 }
-                            } while (choice != 3);
+                            } while (true);
 
                         } else {
                             System.out.println("Błędne hasło");
