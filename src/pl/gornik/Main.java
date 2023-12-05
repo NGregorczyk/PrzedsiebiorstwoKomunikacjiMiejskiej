@@ -196,6 +196,7 @@ public class Main {
 
                     switch (choice2) {
                         case 1:
+                            hasloWprowadzone=true;
                             System.out.println("Wybierz który rozkład jazdy chcesz wyświetlić");
                             System.out.println("1.Linia 1");
                             System.out.println("2.Linia 2");
@@ -233,7 +234,7 @@ public class Main {
                                 }
                             } else {
                                 System.out.println("Błędny wybór)");
-                            }
+                            }break;
 
                         case 2:
                             System.out.println("Rozkład jazdy tramwajów");
@@ -280,25 +281,30 @@ public class Main {
                         case 3:
                             System.out.println("Podaj nazwę ulicy: ");
                             String nazwaStacji = scanner.nextLine();
+                            ;
 
                             wyswietlStacje(stacja1, nazwaStacji);
                             wyswietlStacje(stacja2, nazwaStacji);
                             wyswietlStacje(stacja3, nazwaStacji);
                             break;
                         case 4:
+                            hasloWprowadzone=true;
                             System.out.println("Podaj nazwę ulicy: ");
                             String nazwaUlicy = scanner.nextLine();
 
                             wyswietlPrzystanki(linia1, nazwaUlicy);
                             wyswietlPrzystanki(linia2, nazwaUlicy);
                             wyswietlPrzystanki(linia3, nazwaUlicy);
+                            System.out.println("");
                             break;
                         case 5:
+                            hasloWprowadzone=true;
                             System.out.println("Wybierz środek komunikacji");
                             System.out.println("1.Autobus");
                             System.out.println("2.Tramwaj");
                             int wybor2 = scanner.nextInt();
                             scanner.nextLine();
+
                             if (wybor2 == 1) {
 
                                 System.out.println("Podaj przystanek początkowy: ");
@@ -328,7 +334,6 @@ public class Main {
 
                                 double kosztBiletow = obliczKosztBiletow(wybranaLinia, poczatkowyPrzystanek, koncowyPrzystanek, ulgowy);
                                 System.out.println("Koszt biletów: " + kosztBiletow);
-                                System.out.println(" ");
 
                             } else if (wybor2==2) {
                                 System.out.println("Podaj staję początkową: ");
@@ -359,7 +364,8 @@ public class Main {
                                 double kosztBiletow = obliczKosztBiletowT(wybranaLinia, poczatkowyPrzystanek, koncowyPrzystanek, ulgowy);
                                 System.out.println("Koszt biletów: " + kosztBiletow);
                                 System.out.println(" ");
-                            }
+                            } break;
+
                         case 6:
                             System.exit(0);
                         default:
@@ -796,7 +802,8 @@ public class Main {
     private static void wyswietlPrzystanki(ArrayList<Przystanek> linia, String nazwaUlicy) {
         System.out.println("Przystanki na ulicy " + nazwaUlicy + ":");
         for (Przystanek przystanek : linia) {
-            if (przystanek.getNazwaUlicy().equalsIgnoreCase(nazwaUlicy)) {
+            if (przystanek.getNazwaUlicy().toLowerCase().startsWith("ul.") &&
+                    przystanek.getNazwaUlicy().substring(3).equalsIgnoreCase(nazwaUlicy.toLowerCase())) {
                 System.out.println("Linia: " + przystanek.getLinia() +
                         ", Godzina przyjazdu: " + przystanek.getGodzinaPrzyjazdu() +
                         ", Nazwa ulicy: " + przystanek.getNazwaUlicy());
@@ -807,7 +814,8 @@ public class Main {
     private static void wyswietlStacje(ArrayList<Stacja> linia, String nazwaStacji) {
         System.out.println("Przystanki na ulicy " + nazwaStacji + ":");
         for (Stacja stacja : linia) {
-            if (stacja.getNazwaStacji().equalsIgnoreCase(nazwaStacji)) {
+            if (stacja.getNazwaStacji().toLowerCase().startsWith("ul.") &&
+                    stacja.getNazwaStacji().substring(3).equalsIgnoreCase(nazwaStacji.toLowerCase())){
                 System.out.println("Linia: " + stacja.getStacja() +
                         ", Godzina przyjazdu: " + stacja.getGodzinaPrzyjazdu() +
                         ", Nazwa ulicy: " + stacja.getNazwaStacji());
